@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\formularioController;
+use App\Http\Controllers\FrutaController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,4 @@ Route::get('/', function () {
 });
 
 Route::get('Formulario',[formularioController::class,'showFormulario']);
+Route::post('Save', [FrutaController::class, 'saveData'])->name('saveData');
